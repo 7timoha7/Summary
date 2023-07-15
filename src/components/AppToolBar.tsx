@@ -14,6 +14,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import appBar from "../Assets/images/appBar.jpg";
+import {useNavigate} from "react-router-dom";
 
 interface Props {
     /**
@@ -30,6 +31,7 @@ const navItems = ['Резюме', 'Образование', 'Опыт работ
 const AppToolBar: React.FC<Props> = (props) => {
     const {window} = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const navigate = useNavigate();
 
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
@@ -55,6 +57,15 @@ const AppToolBar: React.FC<Props> = (props) => {
 
     const container = window !== undefined ? () => window().document.body : undefined;
 
+    const pageTo = (item: string) => {
+        let link = '';
+        if (item === 'Образование') {
+            link = '/education'
+            return link
+        }
+
+    }
+
     return (
         <Box sx={{display: 'flex'}}>
             <CssBaseline/>
@@ -79,7 +90,7 @@ const AppToolBar: React.FC<Props> = (props) => {
                     </Typography>
                     <Box sx={{display: {xs: 'none', sm: 'block'}}}>
                         {navItems.map((item) => (
-                            <Button key={item} sx={{color: '#fff'}}>
+                            <Button key={item} sx={{color: '#fff'}} onClick={() => navigate('' + pageTo(item))}>
                                 {item}
                             </Button>
                         ))}

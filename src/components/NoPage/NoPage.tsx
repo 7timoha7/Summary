@@ -4,7 +4,7 @@ import {Grid} from "@mui/material";
 const NoPage = () => {
   return (
     <>
-      <Grid container spacing={1} justifyContent={'center'}>
+      <Grid container spacing={1} justifyContent={'center'} p={10}>
         <h1>Non-existent page</h1>
       </Grid>
     </>
