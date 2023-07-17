@@ -1,28 +1,29 @@
 import React from 'react';
 import {Card, Grid} from "@mui/material";
-import avatar from "../../Assets/images/avatar.jpg";
 import './MainStyles.css'
+import avatar from '../../Assets/images/avatar.jpg'
 
 const Main = () => {
   return (
     <Card sx={{mt: 10, ml: 2, mr: 2}}>
       <Grid container display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
         <Grid item>
-          <div className="card">
-            <img src={avatar}
-                 width={'100%'}
-                 alt={'artem'}/>
-            <div className="card__content">
-              <p className="card__title">Маркелов Артём
-              </p>
-              <ul>
-                <li>35 лет</li>
-                <li>г. Бишкек</li>
-                <li>Гражданство: Кыргызстан</li>
-                <li>Программист-разработчик Javascript (React+Node.js)</li>
-              </ul>
+          <section className="container">
+            <div className="card-container">
+              <div className="card-content">
+                <div className="card-title">
+                  <span className="title">Маркелов Артём</span>
+                </div>
+                <div className="card-body">
+                  <img src={avatar} className={'img-avatar'}/>
+
+                </div>
+                <div className="card-footer">
+                  {/*<span className="title">Some extra Information</span>*/}
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
         </Grid>
         <Grid item>
         </Grid>
