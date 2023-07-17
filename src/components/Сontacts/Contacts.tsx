@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './contactsStyle.css';
 import {Grid} from "@mui/material";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
