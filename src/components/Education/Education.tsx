@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Card, CardContent, Container, Typography} from "@mui/material";
+import {Box, Card, CardContent, Typography} from "@mui/material";
 import {keyframes} from "@mui/system";
 
 const Education = () => {
