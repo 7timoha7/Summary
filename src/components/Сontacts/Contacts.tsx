@@ -7,8 +7,12 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 
 const Contacts = () => {
 
-  const handleConfirm = () => {
+  const handleWhatsApp = () => {
     window.open('https://wa.me/996550903350?text=Здравствуйте,%20я%20хочу%20связаться%20с%20вами!', '_blank');
+  };
+
+  const handleTelegram = () => {
+    window.open('https://t.me/Aaaaaa_kg', '_blank');
   };
 
   return (
@@ -18,10 +22,10 @@ const Contacts = () => {
           <div className="main">
             <div className="up">
               <button className="card1">
-                <WhatsAppIcon onClick={handleConfirm} className="whatsapp-icon" sx={{mt: 2, ml: 2}}/>
+                <WhatsAppIcon onClick={handleWhatsApp} className="whatsapp-icon" sx={{mt: 2, ml: 2}}/>
               </button>
               <button className="card2">
-                <TelegramIcon className="telegram-icon" sx={{mt: 2, mr: 2}}/>
+                <TelegramIcon onClick={handleTelegram} className="telegram-icon" sx={{mt: 2, mr: 2}}/>
               </button>
             </div>
             <div className="down">
