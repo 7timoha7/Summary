@@ -15,7 +15,7 @@ const Main = () => {
                   <span className="title">Маркелов Артём</span>
                 </div>
                 <div className="card-body">
-                  <img src={avatar} className={'img-avatar'}/>
+                  <img src={avatar} className={'img-avatar'} alt={'img'}/>
 
                 </div>
                 <div className="card-footer">

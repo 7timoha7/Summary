@@ -12,9 +12,9 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import appBar from "../../Assets/images/appBar.jpg";
 import {useNavigate} from "react-router-dom";
+import ButtonNeon from "../Buttons/ButtonNeon/ButtonNeon";
 
 const drawerWidth = 240;
 const navItems = ['Резюме', 'Образование', 'Опыт работы', 'Контакты'];
@@ -108,13 +108,10 @@ const AppToolBar: React.FC = () => {
           </Typography>
           <Box sx={{display: {xs: 'none', sm: 'block'}}}>
             {navItems.map((item) => (
-              <Button
-                key={item}
-                sx={{color: '#fff'}}
-                onClick={() => navigate(pageTo(item))}
-              >
-                {item}
-              </Button>
+              <ButtonNeon key={item}
+                          click={() => navigate(pageTo(item))}
+                          buttonName={item}
+              />
             ))}
           </Box>
         </Toolbar>
