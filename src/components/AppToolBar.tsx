@@ -16,107 +16,123 @@ import Button from '@mui/material/Button';
 import appBar from "../Assets/images/appBar.jpg";
 import {useNavigate} from "react-router-dom";
 
-interface Props {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window?: () => Window;
-}
-
 const drawerWidth = 240;
 const navItems = ['Резюме', 'Образование', 'Опыт работы', 'Контакты'];
 
+const AppToolBar: React.FC = () => {
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const navigate = useNavigate();
 
-const AppToolBar: React.FC<Props> = (props) => {
-    const {window} = props;
-    const [mobileOpen, setMobileOpen] = React.useState(false);
-    const navigate = useNavigate();
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
 
-    const handleDrawerToggle = () => {
-        setMobileOpen((prevState) => !prevState);
-    };
+  const redirectToRoot = () => {
+    navigate('/');
+  };
 
-    const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
-            <Typography variant="h6" sx={{my: 2}}>
-                MUI
-            </Typography>
-            <Divider/>
-            <List>
-                {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{textAlign: 'center'}}>
-                            <ListItemText primary={item}/>
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-        </Box>
-    );
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
+      <Typography variant="h6" sx={{my: 2}}>
+        MUI
+      </Typography>
+      <Divider/>
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton sx={{textAlign: 'center'}} onClick={() => navigate(pageTo(item))}>
+              <ListItemText primary={item}/>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
-    const container = window !== undefined ? () => window().document.body : undefined;
-
-    const pageTo = (item: string) => {
-        let link = '';
-        if (item === 'Образование') {
-            link = '/education'
-            return link
-        }
-
+  const pageTo = (item: string) => {
+    let link = '';
+    if (item === 'Образование') {
+      link = '/education';
+    } else if (item === 'Опыт работы') {
+      link = '/experience';
+    } else if (item === 'Контакты') {
+      link = '/contacts';
     }
+    return link;
+  };
 
-    return (
-        <Box sx={{display: 'flex'}}>
-            <CssBaseline/>
-            <AppBar component="nav" sx={{backgroundImage: `url(${appBar})`}}>
-                < Toolbar>
-                    < IconButton
-                        color="inherit"
-                        aria-label="open drawer"
-                        edge="start"
-                        onClick={handleDrawerToggle}
-                        sx={{mr: 2, display: {sm: 'none'}}}
-                    >
-                        <MenuIcon/>
-                        Маркелов Артём
-                    </IconButton>
-                    <Typography
-                        variant="h6"
-                        component="div"
-                        sx={{flexGrow: 1, display: {xs: 'none', sm: 'block'}}}
-                    >
-                        Маркелов Артём
-                    </Typography>
-                    <Box sx={{display: {xs: 'none', sm: 'block'}}}>
-                        {navItems.map((item) => (
-                            <Button key={item} sx={{color: '#fff'}} onClick={() => navigate('' + pageTo(item))}>
-                                {item}
-                            </Button>
-                        ))}
-                    </Box>
-                </Toolbar>
-            </AppBar>
-            <Box component="nav">
-                <Drawer
-                    container={container}
-                    variant="temporary"
-                    open={mobileOpen}
-                    onClose={handleDrawerToggle}
-                    ModalProps={{
-                        keepMounted: true,
-                    }}
-                    sx={{
-                        display: {xs: 'block', sm: 'none'},
-                        '& .MuiDrawer-paper': {boxSizing: 'border-box', width: drawerWidth},
-                    }}
-                >
-                    {drawer}
-                </Drawer>
-            </Box>
-        </Box>
-    )
-        ;
+  return (
+    <Box sx={{display: 'flex'}}>
+      <CssBaseline/>
+      <AppBar component="nav" sx={{backgroundImage: `url(${appBar})`}}>
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{mr: 2, display: {sm: 'none'}}}
+          >
+            <MenuIcon/>
+          </IconButton>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              flexGrow: 1,
+              display: {xs: 'none', sm: 'block'},
+              cursor: 'pointer',
+              userSelect: 'none',
+            }}
+            onClick={redirectToRoot}
+          >
+            Маркелов Артём
+          </Typography>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              flexGrow: 1,
+              display: {xs: 'block', sm: 'none'},
+              textAlign: 'center',
+              cursor: 'pointer',
+              userSelect: 'none',
+            }}
+            onClick={redirectToRoot}
+          >
+            Маркелов Артём
+          </Typography>
+          <Box sx={{display: {xs: 'none', sm: 'block'}}}>
+            {navItems.map((item) => (
+              <Button
+                key={item}
+                sx={{color: '#fff'}}
+                onClick={() => navigate(pageTo(item))}
+              >
+                {item}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Box component="nav">
+        <Drawer
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true,
+          }}
+          sx={{
+            display: {xs: 'block', sm: 'none'},
+            '& .MuiDrawer-paper': {boxSizing: 'border-box', width: drawerWidth},
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </Box>
+    </Box>
+  );
 };
 
 export default AppToolBar;

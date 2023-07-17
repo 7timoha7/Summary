@@ -6,7 +6,7 @@ import avatar from "../../Assets/images/avatar.jpg";
 const fadeInFromTop = keyframes`
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-40px);
   }
   to {
     opacity: 1;
@@ -17,7 +17,7 @@ const fadeInFromTop = keyframes`
 const fadeInFromBottom = keyframes`
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
