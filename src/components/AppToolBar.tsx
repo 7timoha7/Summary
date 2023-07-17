@@ -34,7 +34,7 @@ const AppToolBar: React.FC = () => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
       <Typography variant="h6" sx={{my: 2}}>
-        MUI
+        Menu
       </Typography>
       <Divider/>
       <List>
@@ -57,6 +57,8 @@ const AppToolBar: React.FC = () => {
       link = '/experience';
     } else if (item === 'Контакты') {
       link = '/contacts';
+    } else if (item === 'Опыт работы') {
+      link = '/experience';
     }
     return link;
   };

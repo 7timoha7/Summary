@@ -6,23 +6,25 @@ import {Route, Routes} from "react-router-dom";
 import NoPage from "./components/NoPage/NoPage";
 import Main from "./components/Main/Main";
 import Education from "./components/Education/Education";
+import Experience from "./components/Experience/Experience";
 
 
 function App() {
-    return (
-        <>
-            <CssBaseline/>
-            <AppToolBar/>
+  return (
+    <>
+      <CssBaseline/>
+      <AppToolBar/>
 
+      <Routes>
+        <Route path={'/'} element={<Main/>}/>
+        <Route path={'/summary'} element={<Summary/>}/>
+        <Route path={'/education'} element={<Education/>}/>
+        <Route path={'/experience'} element={<Experience/>}/>
 
-            <Routes>
-                <Route path={'/'} element={<Main/>}/>
-                <Route path={'/summary'} element={<Summary/>}/>
-                <Route path={'/education'} element={<Education/>}/>
-                <Route path={'/*'} element={<NoPage/>}/>
-            </Routes>
-        </>
-    );
+        <Route path={'/*'} element={<NoPage/>}/>
+      </Routes>
+    </>
+  );
 }
 
 export default App;
