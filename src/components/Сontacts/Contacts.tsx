@@ -1,5 +1,5 @@
 import React from 'react';
-import './contactsStyle.css';
+import './contactsStyles.css';
 import {Card, Grid, Typography} from "@mui/material";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import TelegramIcon from '@mui/icons-material/Telegram';

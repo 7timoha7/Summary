@@ -1,51 +1,36 @@
 import React from 'react';
-import {Avatar, Card, Container, Grid, Typography} from "@mui/material";
-import {keyframes} from "@emotion/react";
+import {Card, Grid} from "@mui/material";
 import avatar from "../../Assets/images/avatar.jpg";
-
-const fadeInFromTop = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
-const fadeInFromBottom = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
+import './MainStyles.css'
 
 const Main = () => {
-    return (
-        <Container sx={{ p: 10 }}>
-            <Card>
-                <Grid container display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
-                    <Grid item>
-                        <Avatar
-                            sx={{ width: 120, height: 120, animation: `${fadeInFromTop} 0.7s ease-in` }}
-                            src={avatar}
-                            alt="Аватар"
-                        />
-                    </Grid>
-                    <Grid item>
-                        <Typography variant="h5" component="div" ml={2} sx={{ animation: `${fadeInFromBottom} 0.7s ease-in` }}>
-                            Маркелов Артём
-                        </Typography>
-                    </Grid>
-                </Grid>
-            </Card>
-        </Container>
-    );
+  return (
+    <Card sx={{mt: 10, ml: 2, mr: 2}}>
+      <Grid container display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
+        <Grid item>
+          <div className="card">
+            <img src={avatar}
+                 width={'100%'}
+                 alt={'artem'}/>
+            <div className="card__content">
+              <p className="card__title">Маркелов Артём
+              </p>
+              <ul>
+                <li>35 лет</li>
+                <li>г. Бишкек</li>
+                <li>Гражданство: Кыргызстан</li>
+                <li>Программист-разработчик Javascript (React+Node.js)</li>
+              </ul>
+            </div>
+          </div>
+        </Grid>
+        <Grid item>
+        </Grid>
+      </Grid>
+
+
+    </Card>
+  );
 };
 
 export default Main;
