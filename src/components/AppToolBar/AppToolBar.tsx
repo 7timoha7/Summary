@@ -13,7 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import appBar from "../Assets/images/appBar.jpg";
+import appBar from "../../Assets/images/appBar.jpg";
 import {useNavigate} from "react-router-dom";
 
 const drawerWidth = 240;
@@ -59,6 +59,8 @@ const AppToolBar: React.FC = () => {
       link = '/contacts';
     } else if (item === 'Опыт работы') {
       link = '/experience';
+    } else if (item === 'Контакты') {
+      link = '/contacts';
     }
     return link;
   };
