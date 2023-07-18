@@ -20,7 +20,7 @@ const Summary = () => {
 
     <>
       <Card
-        sx={{mt: 5, ml: 2, mr: 2, pt: 6, pb: 6, backgroundColor: 'rgba(255,255,255,0.29)'}}>
+        sx={{mt: 5, ml: 2, mr: 2, pt: 6, pb: 6, backgroundColor: 'rgba(0,0,0,0.67)'}}>
         < Grid container display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
           <Grid item>
             <section className="container">
