@@ -4,7 +4,7 @@ import {keyframes} from "@mui/system";
 
 const Education = () => {
   const keySkills = [
-    'Знание языков: Русский — Родной',
+    'Знание языков: Русский, Английский(A1)',
     'JavaScript',
     'Next.js',
     'TypeScript',
