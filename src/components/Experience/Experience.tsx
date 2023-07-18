@@ -2,7 +2,6 @@ import React from 'react';
 import {Accordion, AccordionDetails, AccordionSummary, Box, Card, CardContent, Typography} from "@mui/material";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-
 const Experience = () => {
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
@@ -12,13 +11,16 @@ const Experience = () => {
     };
   return (
 
-    <Card sx={{m: 2, mt: 10, backgroundColor: 'rgba(255,255,255,0.29)'}}>
-      <CardContent>
+    <Card sx={{m: 2, mt: 10, backgroundColor: 'rgba(0,0,0,0.67)'}}>
+      <CardContent sx={{color: 'white'}}>
         <Typography variant="h5" sx={{mb: 2}}>
           Опыт работы: 12 лет 7 месяцев
         </Typography>
         <Box sx={{mb: 2}}>
-          <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+          <Accordion
+            sx={{color: 'white', backgroundColor: 'rgb(140,89,159)'}}
+            expanded={expanded === 'panel1'}
+            onChange={handleChange('panel1')}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon/>}
               aria-controls="panel1bh-content"
@@ -27,7 +29,7 @@ const Experience = () => {
               <Typography sx={{width: '33%', flexShrink: 0}}>
                 7Media, Бишкек
               </Typography>
-              <Typography sx={{color: 'text.secondary'}}>
+              <Typography>
                 10 лет 4 месяца</Typography>
             </AccordionSummary>
             <AccordionDetails>
@@ -43,7 +45,9 @@ const Experience = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+          <Accordion
+            sx={{color: 'white', backgroundColor: 'rgb(140,89,159)'}}
+            expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon/>}
               aria-controls="panel2bh-content"
@@ -51,7 +55,7 @@ const Experience = () => {
             >
               <Typography sx={{width: '33%', flexShrink: 0}}>КГМА им.
                 И.К.Ахунбаева</Typography>
-              <Typography sx={{color: 'text.secondary'}}>
+              <Typography>
                 2 года 3 месяца
               </Typography>
             </AccordionSummary>

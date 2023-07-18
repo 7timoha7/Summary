@@ -89,7 +89,7 @@
 .card3:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: rgba(0, 0, 0, 0.49);
+  background-color: rgba(131, 125, 125, 0.49);
 }
 
 .card3:hover .github {
