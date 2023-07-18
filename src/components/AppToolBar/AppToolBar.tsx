@@ -2,7 +2,6 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
@@ -13,6 +12,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import {useNavigate} from "react-router-dom";
 import ButtonNeon from "../Buttons/ButtonNeon/ButtonNeon";
+import imgDrawer from '../../Assets/images/body2.jpg'
 
 const drawerWidth = 240;
 const navItems = ['Резюме', 'Образование', 'Опыт работы', 'Контакты'];
@@ -30,21 +30,39 @@ const AppToolBar: React.FC = () => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{textAlign: 'center'}}>
-      <Typography variant="h6" sx={{my: 2}}>
-        Menu
-      </Typography>
-      <Divider/>
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{textAlign: 'center'}} onClick={() => navigate(pageTo(item))}>
-              {/*<ListItemText primary={item}/>*/}
-              <ButtonNeon click={() => navigate(pageTo(item))} buttonName={item}/>
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        position: 'relative',
+        textAlign: 'center',
+        backgroundImage: `url(${imgDrawer})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center center',
+        backgroundSize: 'cover',
+        height: '100vh',
+        zIndex: 0,
+      }}
+    >
+      <Box sx={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'rgba(0,0,0,0.7)',
+        zIndex: 1
+      }}/> {/* Слой для затемнения */}
+      <Box sx={{position: 'relative', zIndex: 2}}> {/* Этот контейнер будет отображаться над слоем затемнения */}
+        <List>
+          {navItems.map((item) => (
+            <ListItem key={item} disablePadding>
+              <ListItemButton sx={{textAlign: 'center'}} onClick={() => navigate(pageTo(item))}>
+                <ButtonNeon click={() => navigate(pageTo(item))} buttonName={item}/>
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+      </Box>
     </Box>
   );
 

@@ -28,7 +28,7 @@ const Contacts = () => {
 
   return (
     <>
-      <Card sx={{m: 2, mt: 10}}>
+      <Card sx={{m: 2, mt: 10, backgroundColor: 'rgba(255,255,255,0.29)'}}>
         <Typography fontSize={'25px'} fontWeight={'bold'} textAlign={'center'}>Контакты</Typography>
         <Grid container justifyContent={"center"} sx={{mt: 5, mb: 5}}>
           <Grid item>

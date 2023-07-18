@@ -16,15 +16,12 @@ function App() {
     <>
       <CssBaseline/>
       <AppToolBar/>
-
       <Routes>
         <Route path={'/'} element={<Main/>}/>
         <Route path={'/summary'} element={<Summary/>}/>
         <Route path={'/education'} element={<Education/>}/>
         <Route path={'/experience'} element={<Experience/>}/>
         <Route path={'/contacts'} element={<Contacts/>}/>
-
-
         <Route path={'/*'} element={<NoPage/>}/>
       </Routes>
     </>

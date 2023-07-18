@@ -3,7 +3,6 @@ import {Card, Grid} from "@mui/material";
 import avatar from "../../Assets/images/avatar.jpg";
 import './Summary.css'
 import ButtonSpace from "../Buttons/ButtonSpace/ButtonSpace";
-import appBar from "../../Assets/images/appBar.jpg";
 
 const Summary = () => {
   const fileDownloadLink = 'https://drive.google.com/uc?export=download&id=1WBjVH31GOTXN3R9GMugkSPCsbRw7EIIX';
@@ -32,10 +31,6 @@ const Summary = () => {
                   </div>
                   <div className="card-body">
                     <img src={avatar} className={'img-avatar'} alt={'img'}/>
-
-                  </div>
-                  <div className="card-footer">
-                    <span className="title">Some extra Information</span>
                   </div>
                 </div>
               </div>
