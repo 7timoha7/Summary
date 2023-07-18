@@ -1,13 +1,14 @@
 import React from 'react';
 import AppToolBar from "./components/AppToolBar/AppToolBar";
 import {CssBaseline} from "@mui/material";
-import Summary from "./components/Summary";
+import Summary from "./components/Summary/Summary";
 import {Route, Routes} from "react-router-dom";
 import NoPage from "./components/NoPage/NoPage";
 import Main from "./components/Main/Main";
 import Education from "./components/Education/Education";
 import Experience from "./components/Experience/Experience";
 import Contacts from "./components/Сontacts/Contacts";
+import './App.css';
 
 
 function App() {

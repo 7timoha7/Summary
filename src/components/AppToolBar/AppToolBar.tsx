@@ -8,11 +8,9 @@ import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import appBar from "../../Assets/images/appBar.jpg";
 import {useNavigate} from "react-router-dom";
 import ButtonNeon from "../Buttons/ButtonNeon/ButtonNeon";
 
@@ -41,7 +39,8 @@ const AppToolBar: React.FC = () => {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{textAlign: 'center'}} onClick={() => navigate(pageTo(item))}>
-              <ListItemText primary={item}/>
+              {/*<ListItemText primary={item}/>*/}
+              <ButtonNeon click={() => navigate(pageTo(item))} buttonName={item}/>
             </ListItemButton>
           </ListItem>
         ))}
@@ -57,8 +56,8 @@ const AppToolBar: React.FC = () => {
       link = '/experience';
     } else if (item === 'Контакты') {
       link = '/contacts';
-    } else if (item === 'Опыт работы') {
-      link = '/experience';
+    } else if (item === 'Резюме') {
+      link = '/summary';
     } else if (item === 'Контакты') {
       link = '/contacts';
     }
@@ -68,7 +67,7 @@ const AppToolBar: React.FC = () => {
   return (
     <Box sx={{display: 'flex'}}>
       <CssBaseline/>
-      <AppBar component="nav" sx={{backgroundImage: `url(${appBar})`}}>
+      <AppBar component="nav" position="static" sx={{backgroundColor: 'transparent'}}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -108,9 +107,10 @@ const AppToolBar: React.FC = () => {
           </Typography>
           <Box sx={{display: {xs: 'none', sm: 'block'}}}>
             {navItems.map((item) => (
-              <ButtonNeon key={item}
-                          click={() => navigate(pageTo(item))}
-                          buttonName={item}
+              <ButtonNeon
+                key={item}
+                click={() => navigate(pageTo(item))}
+                buttonName={item}
               />
             ))}
           </Box>
