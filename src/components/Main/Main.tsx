@@ -5,7 +5,7 @@ import avatarImg from '../../Assets/images/avatar.jpg'
 
 const Main = () => {
   return (
-    <Card sx={{mt: 10, ml: 2, mr: 2, backgroundColor: 'rgba(255,255,255,0.29)', pt: 3, pb: 3}}>
+    <Card sx={{mt: 10, ml: 2, mr: 2, backgroundColor: 'rgba(0,0,0,0.67)', pt: 3, pb: 3}}>
       <Grid container display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
         <Grid item>
           <div className="code-editor">
