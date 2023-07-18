@@ -43,7 +43,7 @@ const Contacts = () => {
               </div>
               <div className="down">
                 <button onClick={handleGitHub} className="card3">
-                  <GitHubIcon className="github-icon" sx={{mr: 2, ml: 3}}/>
+                  <GitHubIcon className="github-icon" sx={{mr: 2, ml: 2.5}}/>
                 </button>
                 <button onClick={handleLinkedIn} className="card4">
                   <LinkedInIcon className="telegram-icon" sx={{mr: 2}}/>

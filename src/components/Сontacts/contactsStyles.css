@@ -17,8 +17,8 @@
 }
 
 .card1 {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   outline: none;
   border: none;
   background: white;
@@ -34,8 +34,8 @@
 }
 
 .card2 {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   outline: none;
   border: none;
   background: white;
@@ -45,8 +45,8 @@
 }
 
 .card3 {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   outline: none;
   border: none;
   background: white;
@@ -56,8 +56,8 @@
 }
 
 .card4 {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   outline: none;
   border: none;
   background: white;
@@ -69,7 +69,7 @@
 .card1:hover {
   cursor: pointer;
   scale: 1.1;
-  background-color: #b0e9a3;
+  background-color: rgba(176, 233, 163, 0.69);
 }
 
 .card1:hover .instagram {

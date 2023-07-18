@@ -99,13 +99,8 @@ const AppToolBar: React.FC = () => {
           <Typography
             variant="h6"
             component="div"
-            sx={{
-              flexGrow: 1,
-              display: {xs: 'none', sm: 'block'},
-              cursor: 'pointer',
-              userSelect: 'none',
-            }}
             onClick={redirectToRoot}
+            className='buttonNeon'
           >
             Маркелов Артём
           </Typography>
