@@ -5,8 +5,9 @@ import avatarImg from '../../Assets/images/avatar.jpg'
 
 const Main = () => {
   return (
-    <Card sx={{mt: 10, ml: 2, mr: 2, backgroundColor: 'rgba(0,0,0,0.67)', pt: 3, pb: 3}}>
-      <Grid container display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
+      <Grid
+        sx={{mt: 3, pt: 3, pb: 3}}
+        container display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
         <Grid item>
           <div className="code-editor">
             <div className="header">
@@ -30,8 +31,6 @@ const Main = () => {
                 </p>
                 <p className="property">
                   <span className="color-2">skills</span><span>: </span>
-
-
                   <span className="skill-color4">Next.js, </span>
                   <span className="skill-color3">TypeScript, </span>
                   <span className="skill-color2">Express.js, </span>
@@ -57,7 +56,6 @@ const Main = () => {
                   <span className="skill-color2">React Native, </span>
                   <span className="skill-color1">JS, </span>
                   <span className="skill-color4">React.js, </span>
-
                 </p>
                 <span></span>
               </code>
@@ -65,7 +63,6 @@ const Main = () => {
           </div>
         </Grid>
       </Grid>
-    </Card>
   );
 };
 
