@@ -66,18 +66,16 @@ const Education = () => {
   };
 
   return (
-    <Card sx={{m: 2, mt: 10, backgroundColor: 'rgba(255,255,255,0.29)'}}>
-      <CardContent>
+    <Card sx={{m: 2, mt: 10, backgroundColor: 'rgba(0,0,0,0.67)'}}>
+      <CardContent sx={{color: 'white'}}>
         <Typography variant="h5" sx={{mb: 2}}>
-          Образование
+          Образование: Высшее
         </Typography>
         <Box sx={{mb: 2}}>
           <Typography variant="subtitle1" sx={{fontWeight: 'bold'}}>
-            Высшее
+            Закончил: 2023
           </Typography>
-          <Typography variant="body1" sx={{fontStyle: 'italic'}}>
-            2023
-          </Typography>
+
           <Typography variant="body1">
             Attractor School
           </Typography>

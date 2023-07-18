@@ -52,7 +52,7 @@ const AppToolBar: React.FC = () => {
         backgroundColor: 'rgba(0,0,0,0.7)',
         zIndex: 1
       }}/> {/* Слой для затемнения */}
-      <Box sx={{position: 'relative', zIndex: 2}}> {/* Этот контейнер будет отображаться над слоем затемнения */}
+      <Box sx={{position: 'relative', zIndex: 2}}>
         <List>
           {navItems.map((item) => (
             <ListItem key={item} disablePadding>
@@ -98,23 +98,9 @@ const AppToolBar: React.FC = () => {
           </IconButton>
           <Typography
             variant="h6"
-            component="div"
+            component="button"
             onClick={redirectToRoot}
             className='buttonNeon'
-          >
-            Маркелов Артём
-          </Typography>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              flexGrow: 1,
-              display: {xs: 'block', sm: 'none'},
-              textAlign: 'center',
-              cursor: 'pointer',
-              userSelect: 'none',
-            }}
-            onClick={redirectToRoot}
           >
             Маркелов Артём
           </Typography>
