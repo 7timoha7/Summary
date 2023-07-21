@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, Grid} from "@mui/material";
+import {Card, Grid, Typography} from "@mui/material";
 import avatar from "../../Assets/images/avatar.jpg";
 import './Summary.css'
 import ButtonSpace from "../Buttons/ButtonSpace/ButtonSpace";
@@ -22,6 +22,12 @@ const Summary = () => {
       <Card
         sx={{mt: 5, ml: 2, mr: 2, pt: 6, pb: 6, backgroundColor: 'rgba(0,0,0,0.67)'}}>
         < Grid container display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
+          <Typography
+            color={'white'}
+            fontSize={'25px'}
+            fontWeight={'bold'}
+            textAlign={'center'}
+          >Скачать резюме</Typography>
           <Grid item>
             <section className="container">
               <div className="card-container">
