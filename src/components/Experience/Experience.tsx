@@ -33,16 +33,19 @@ const Experience = () => {
                 10 лет 4 месяца</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>Ноябрь 2011 —
-                Февраль 2022</Typography>
-              <Typography>
-                Контент-менеджер
-              </Typography>
-              <Typography>
-                Работал над наполнением контента , подготавливал его для сайтов ,чтобы не нарушались права,
-                условия и ограничения правообладателей. Делал описание, выбор картинок и баннеров , что
-                бы было кликабельно и интригующе.
-              </Typography>
+              <Box sx={{background: 'rgb(50,27,67)', p: 1, borderRadius: 1}}>
+                <Typography>Ноябрь 2011 —
+                  Февраль 2022</Typography>
+                <Typography>
+                  Контент-менеджер
+                </Typography>
+                <Typography>
+                  Работал над наполнением контента, подготавливал его для сайтов ,чтобы не нарушались права,
+                  условия и ограничения правообладателей. Делал описание, выбор картинок и баннеров, что
+                  бы было кликабельно и интригующе.
+                </Typography>
+              </Box>
+
             </AccordionDetails>
           </Accordion>
           <Accordion
@@ -60,14 +63,17 @@ const Experience = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>Май 2008 — Июль 2010</Typography>
-              <Typography>
-                Специалист it отдела
-              </Typography>
-              <Typography>
-                Осуществлял работу по всей сети компьютеров университета ,настройка сети , ремонт и
-                обслуживание ПК , закупка, сборка новой техники и запчастей .
-              </Typography>
+              <Box sx={{background: 'rgb(50,27,67)', p: 1, borderRadius: 1}}>
+                <Typography>Май 2008 — Июль 2010</Typography>
+                <Typography>
+                  Специалист it отдела
+                </Typography>
+                <Typography>
+                  Осуществлял работу по всей сети компьютеров медицинской академии, настройка сети, ремонт и
+                  обслуживание ПК, закупка, сборка новой техники и запчастей.
+                </Typography>
+              </Box>
+
             </AccordionDetails>
           </Accordion>
         </Box>

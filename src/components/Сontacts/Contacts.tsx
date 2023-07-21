@@ -5,6 +5,8 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
 
 
 const Contacts = () => {
@@ -35,9 +37,17 @@ const Contacts = () => {
           fontWeight={'bold'}
           textAlign={'center'}
         >Контакты</Typography>
-        <Grid container justifyContent={"center"} sx={{mt: 5, mb: 5}}>
+        <Grid container flexDirection={'column'} alignItems={'center'} justifyContent={"center"} sx={{mt: 5, mb: 5}}>
+          <Grid item sx={{ color: 'white', display: 'flex', alignItems: 'center' }}>
+            <PhoneIcon sx={{ mr: 1 }} />
+            <Typography>Телефон: +996 550 903350</Typography>
+          </Grid>
+          <Grid item sx={{ color: 'white', display: 'flex', alignItems: 'center', mt: 1 }}>
+            <EmailIcon sx={{ mr: 1 }} />
+            <Typography>Почта: artem77timoha77@gmail.com</Typography>
+          </Grid>
           <Grid item>
-            <div className="main">
+            <div className="main" style={{marginTop: '20px'}}>
               <div className="up">
                 <button onClick={handleWhatsApp} className="card1">
                   <WhatsAppIcon className="whatsapp-icon" sx={{mt: 2, ml: 2}}/>
