@@ -1,7 +1,7 @@
 import React from 'react';
 import { Avatar, Grid } from "@mui/material";
 import './MainStyles.css'
-import avatarImg from '../../Assets/images/avatar.jpg'
+import avatarImgMini from '../../Assets/images/avatarMini.jpg'
 
 const Main = () => {
   return (
@@ -11,20 +11,24 @@ const Main = () => {
       <Grid item>
         <div className="code-editor">
           <div className="header">
-            <Avatar alt="Артем" src={avatarImg} sx={{ width: 56, height: 56 }} />
+            <Avatar alt="Артем" src={avatarImgMini} sx={{ width: 56, height: 56 }} />
           </div>
           <div className="editor-content">
             <code className="code">
               <span className="color-0">.code-editor <span className="skill-color1">{`{`}</span> </span>
               <br />
+              <br />
               <span className="color-2">name</span><span>: </span>
               <span className="color-1">Markelov Artem</span>;
+              <br />
               <br />
               <span className="color-2">specialization</span><span>: </span>
               <span className="color-preview-1"></span><span># Javascript developer (React+Node.js)</span>;
               <br />
+              <br />
               <span className="color-2">desired position</span><span>: </span>
               <span className="color-1">Frontend developer <span className="color-preview-2"></span></span>;
+              <br />
               <br />
               <span className="color-2">skills</span><span>: [ </span>
               <span className="skill-color4">React, </span>
@@ -46,6 +50,7 @@ const Main = () => {
               <span className="skill-color4">CSS, </span>
               <span className="skill-color3">Bootstrap, </span>
               <span className="skill-color4">Next.js <span className="color-2">]</span></span>;
+              <br />
               <br />
               <span>{'};'}</span>
             </code>

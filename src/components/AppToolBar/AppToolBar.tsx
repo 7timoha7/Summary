@@ -86,7 +86,7 @@ const AppToolBar: React.FC = () => {
     <Box sx={{display: 'flex'}}>
       <CssBaseline/>
       <AppBar component="nav" position="static" sx={{backgroundColor: 'transparent'}}>
-        <Toolbar>
+        <Toolbar sx={{display: 'flex'}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
