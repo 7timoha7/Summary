@@ -27,6 +27,7 @@ const Summary = () => {
             fontSize={'25px'}
             fontWeight={'bold'}
             textAlign={'center'}
+            mb={4}
           >Скачать резюме</Typography>
           <Grid item>
             <section className="container">
