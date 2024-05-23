@@ -14,7 +14,7 @@ const Experience = () => {
     <Card sx={{m: 2, mt: 10, backgroundColor: 'rgba(0,0,0,0.67)'}}>
       <CardContent sx={{color: 'white'}}>
         <Typography variant="h5" sx={{mb: 2}}>
-          Опыт работы: 12 лет 7 месяцев
+          Опыт работы:
         </Typography>
         <Box sx={{mb: 2}}>
           <Accordion
@@ -25,6 +25,49 @@ const Experience = () => {
               expandIcon={<ExpandMoreIcon/>}
               aria-controls="panel1bh-content"
               id="panel1bh-header"
+            >
+              <Typography sx={{width: '33%', flexShrink: 0}}>
+                Passage, Бишкек
+              </Typography>
+              <Typography>
+                Декабрь 2023 - по настоящие время</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box sx={{background: 'rgb(50,27,67)', p: 1, borderRadius: 1}}>
+                <Typography>Декабрь 2023 - по настоящие время</Typography>
+                <Typography>
+                  Web разработчик
+                </Typography>
+                <Typography>
+                  Планирование и разработка сайта для компании "Passage" (интернет-магазин <Box
+                  component="a"
+                  href="https://passage.kg"
+                  sx={{
+                    color: '#e327cc',
+                    fontSize: '25px',
+                    textDecoration: 'none',
+                    '&:hover': {
+                      color: '#f6a5f6',
+                    },
+                  }}
+                >passage.kg</Box> ).
+                  Разработка и реализация как фронтендной, так и бэкэндной частей проекта. Создание дизайна. Успешная
+                  интеграция приложения с базой данных 1С для автоматизации бизнес-процессов и повышения операционной
+                  эффективности. Осуществление релиза проекта на продакшн-серверы и обеспечение всех необходимых
+                  сертификатов безопасности.
+                </Typography>
+              </Box>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion
+            sx={{color: 'white', backgroundColor: 'rgb(140,89,159)'}}
+            expanded={expanded === 'panel2'}
+            onChange={handleChange('panel2')}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon/>}
+              aria-controls="panel2bh-content"
+              id="panel2bh-header"
             >
               <Typography sx={{width: '33%', flexShrink: 0}}>
                 7Media, Бишкек
@@ -50,11 +93,11 @@ const Experience = () => {
           </Accordion>
           <Accordion
             sx={{color: 'white', backgroundColor: 'rgb(140,89,159)'}}
-            expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+            expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon/>}
-              aria-controls="panel2bh-content"
-              id="panel2bh-header"
+              aria-controls="panel3bh-content"
+              id="panel3bh-header"
             >
               <Typography sx={{width: '33%', flexShrink: 0}}>КГМА им.
                 И.К.Ахунбаева</Typography>
