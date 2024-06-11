@@ -62,8 +62,8 @@ const Experience = () => {
 
           <Accordion
             sx={{color: 'white', backgroundColor: 'rgb(140,89,159)'}}
-            expanded={expanded === 'panel2'}
-            onChange={handleChange('panel2')}>
+            expanded={expanded === 'panel4'}
+            onChange={handleChange('panel4')}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon/>}
               aria-controls="panel2bh-content"
