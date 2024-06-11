@@ -5,7 +5,7 @@ import './Summary.css'
 import ButtonSpace from "../Buttons/ButtonSpace/ButtonSpace";
 
 const Summary = () => {
-  const fileDownloadLink = 'https://drive.google.com/uc?export=download&id=1D6RhNMUfVqlyWv-t-X9wIixGY2EQS1-L';
+  const fileDownloadLink = 'https://drive.google.com/uc?export=download&id=1de2XurcwcTawR442p7FlVyzQzw5sS6O5';
 
   const downloadPDF = () => {
     const link = document.createElement('a');
