@@ -70,6 +70,39 @@ const Experience = () => {
               id="panel2bh-header"
             >
               <Typography sx={{width: '33%', flexShrink: 0}}>
+                Frontend developer, Бишкек
+              </Typography>
+              <Typography>
+                5 месяцев</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box sx={{background: 'rgb(50,27,67)', p: 1, borderRadius: 1}}>
+                <Typography>Июль 2023 —
+                  Декабрь 2023</Typography>
+                <Typography>
+                  Freelance - frontend developer
+                </Typography>
+                <Typography>
+                  Работал над внутреннем проектом компании Factory - компания по производству металлоконструкций. Полный
+                  цикл онлайн оформления заказа от рисования чертежа до оплаты и отслеживания доставки.
+                  Стек технологий используемых на проекте:
+                  React, redux, bootstrap, socket, scss, restAPI, Ajax, sagas.
+                </Typography>
+              </Box>
+
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion
+            sx={{color: 'white', backgroundColor: 'rgb(140,89,159)'}}
+            expanded={expanded === 'panel2'}
+            onChange={handleChange('panel2')}>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon/>}
+              aria-controls="panel2bh-content"
+              id="panel2bh-header"
+            >
+              <Typography sx={{width: '33%', flexShrink: 0}}>
                 7Media, Бишкек
               </Typography>
               <Typography>
